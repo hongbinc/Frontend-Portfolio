@@ -5,13 +5,13 @@
         "mobile": "646-379-6838",
         "email": "hongbinchb@gmail.com",
         "github": "hongbinc",
-        "location": "New York, NY"
+        "location": "Brooklyn, NY"
     },
-    "welcomeMessage": "Welcome to my website",
+    "welcomeMessage": " ",
     "skills": [
-        "HTML", "CSS", "Javascript", "jQuery", "Bootstrap", "Wordpress"
+        "HTML5", "CSS3", "Javascript", "jQuery", "Bootstrap", "Knockout.js"
     ],
-    "biopic": "images/fry.jpg"
+    "biopic": "images/me.jpg"
 };
 
 bio.display = function () {
@@ -47,7 +47,7 @@ bio.display = function () {
 
 var education = {
     "onlineCourses": [{
-        "title": "Front-end Developer",
+        "title": "Front-End Web Developer Nanodegree",
         "school": "Udacity",
         "date": "2016",
         "url": "https://www.udacity.com/"
@@ -99,18 +99,17 @@ education.display = function () {
     $(".education-entry:last").append(HTMLonlineClasses)
         .append(formattedOnlineTitle)
         .append(formattedOnlineDates)
-        .append(formattedOnlineSchool)
-        .append(formattedOnlineURL);
+        .append(formattedOnlineSchool);
 };
 var work = {
     "jobs": [{
-        "employer": "University at Buffalo",
-        "title": "Campus Living Area Office Assistance",
-        "dates": "Aug 2012 - Apr 2013",
+        "employer": "KW the Amar Team",
+        "title": "Front-End Web Developer",
+        "dates": "Oct 2015 - Feb 2016",
         "description": 
-            "Provided campus living information to students, worked to build community within the dormitory and manage keys and swipe access cards",
+            "Coded and implemented Two WordPress sites from Photoshop layout through HTML/CSS to Realty theme, functions, and plugins. Implemented Memberful and Stripe plugins to create a membership payment system, Provided technical support and instruction to staff. Website troubleshooting and Maintenance.",
         
-        "location": "Buffalo, New York"
+        "location": "New York, NY"
     }]
 };
 
@@ -137,18 +136,25 @@ work.display = function () {
 var projects = {
     projects: [{
         "title" : "Neighborhood Map",
-        "dates" : "03/2016",
-        "description": "<ur style='list-style-type:disc'><li>Developed single page application featuring a map of neighborhood with Knockout.JS using MVVM architecture.</li><li>Implemented third party APIs (Google Map and Foursquare) allowed users define a neighborhood and displayed 20 popular places on the map with map markers.</li><li>Build a search bar to filter the places.</li></ur>",
+        "dates" : "Mar 2016",
+        "description": "<ur style='list-style-type:disc'><li>Developed single page application featuring a map of neighborhood with Knockout.JS using MVVM architecture.</li><li>Implemented third party APIs (Google Map and Foursquare), allowed users define a neighborhood and search by keywords to displayed 30 popular places on the map with map markers.</li><li>Built a search bar to filter the places displayed on map.</li></ur>",
         "images": [""],
-      //  "url": "https://github.com/hongbinc/Frontend-NeighborhoodMap"
+        "url": "http://hongbinc.github.io/Frontend-NeighborhoodMap/"
            
     }, 
     {
+        "title": "Arcade Game Clone",
+        "dates": "Feb 2016",
+        "description": "<ur><li>Clone of the classic game, Frogger. Udacity provided the art assets and game engine.</li><li>Coded player, enemies, and other game entities in JavaScript's object-oriented pseudo-classical style.</li></ur>",
+        "images": [""],
+        "url": "http://hongbinc.github.io/Frontend-ArcadeGame/"
+    },
+    {
         "title": "Website Optimization",
         "dates": "03/2016",
-        "description": "<ur><li>Optimized critical rendering path of existing website to achieve PageSpeed Insights score above 90.</li><li> Eliminated inefficiencies in the website's scroll animation.</li></ur>",
-        "images": ["images/WebsiteOptimized.JPG"],
-      //  "url": "https://github.com/hongbinc/Frontend-WebsiteOptimization"
+        "description": "<ur><li>Optimized critical rendering path of existing website to achieve PageSpeed Insights score above 90.</li><li>Eliminated inefficiencies in the website's scroll animation. Site now scrolls at 60 frames per second.</li><li>Reduced the scripting time, layout time and painting time by optimizing JavaScript code and CSS style.</li></ur>",
+        "images": [""],
+        "url": "https://github.com/hongbinc/Frontend-WebsiteOptimization"
     }],
 };
 
@@ -157,8 +163,8 @@ projects.display = function () {
     for (var proj in projects.projects) {
         $("#projects").append(HTMLprojectStart);
         
-        var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[proj].title);
-                                                   // .replace("#", projects.projects[proj].url);
+        var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[proj].title)
+                                                    .replace("#", projects.projects[proj].url);
         var formattedProjectDate = HTMLprojectDates.replace("%data%", projects.projects[proj].dates);
         var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[proj].description);
 
